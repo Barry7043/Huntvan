@@ -1,0 +1,217 @@
+.col2-post {
+  height: auto;
+}
+
+.col2-bar1 {
+  height: 60px;
+}
+
+.col2-post-icon {
+  display:inline;
+  height: 60px;
+  width: 60px;
+  float: left;
+  background-color: yellow;
+  border-radius: 35px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.col2-post-follow {
+  width: 100px;
+  text-align: center;
+  float: right;
+  margin-top: 50px;
+  margin-right: 20px;
+  font-weight: 600;
+  border: 1px solid;
+  border-radius: 40px;
+  color: rgb(65, 145, 244);
+  cursor: pointer;
+}
+
+.col2-post-follow:hover {
+    background-color: #2598FF;
+    color: white;
+}
+
+.col2-post-icon img {
+  height: auto;
+  width: 60px;
+  border-radius: 30px;
+  border: 2px solid white;
+}
+
+.col2-bar2-user p{
+  padding: 0px;
+  margin: 0px;
+}
+
+.col2-bar2-user p.col2-bar2-name  {
+  font-size: 1.0em;
+  margin-top: 40px;
+  margin-left: 15px;
+  font-weight: 800;
+}
+
+.col2-bar2-user p.col2-bar2-email {
+  font-size: 0.8em;
+  font-weight: 200;
+  margin-left: 15px;
+}
+
+.col2-bar2-user p.col2-bar2-intro {
+  font-size: 1.0em;
+  margin-top: 5px;
+  margin-left: 15px;
+}
+
+.col2-bar3 {
+  margin-left: 2px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.col2-bar3-button {
+  display:inline;
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+.col2-bar3-text {
+  display:inline;
+  color: grey;
+}
+
+.col2-bar3-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.col2-bar4 {
+  height: 40px;
+}
+
+.col2-bar4-following-number  {
+  margin-left: 15px;
+  display:inline;
+
+}
+
+.col2-bar4-following-text {
+  display:inline;
+  color: grey;
+}
+
+.col2-bar4-follower-number  {
+  margin-left: 10px;
+  display:inline;
+
+}
+
+.col2-bar4-follower-text {
+  display:inline;
+  color: grey;
+}
+
+.col2-posts {
+  height: auto;
+  background-color: #fafafa;
+}
+
+.col2-posts-space {
+  height: 10px;
+  background-color: #fafafa;
+}
+
+.col2-posts-content {
+  height: auto;
+  border: 1px solid #e1e1e1;
+  background-color: #fafafa;
+}
+
+.col2-posts-author {
+  height: 60px;
+}
+
+.col2-posts-author-icon {
+  height: 60px;
+  width: 60px;
+  float: left;
+  background-color: yellow;
+  border-radius: 35px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.col2-posts-author-icon img {
+  height: auto;
+  width: 60px;
+  border-radius: 30px;
+  border: 2px solid white;
+}
+
+.col2-posts-author-info {
+  float: left;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+.col2-posts-author-info-name {
+  font-size: 1.0em;
+  font-weight: 800;
+}
+
+.col2-posts-author-info-email {
+  font-size: 0.8em;
+  font-weight: 200;
+}
+
+.col2-posts-main {
+  height: auto;
+  margin-left: 80px;
+}
+
+.col2-posts-main input {
+  height: auto;
+  width: 83%;
+  border-radius: 30px;
+}
+
+.col2-posts-content-info {
+    margin-top: 10px;
+    float: right;
+    font-size: 13px;
+}
+
+.col2-posts-content-info-left {
+    color: #2aa3ef;
+}
+.col2-posts-content-info-right {
+    color: #69777f;
+    margin: 10px;
+}
+
+.col2-posts-toolbar {
+}
+
+.col2-posts-toolbar-button {
+  display:inline;
+  margin-left: 80px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.col2-posts-toolbar-button img {
+  margin-top: 10px;
+  width: 20px;
+  height: 20px;
+}

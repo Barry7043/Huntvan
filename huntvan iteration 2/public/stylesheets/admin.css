@@ -1,0 +1,202 @@
+/* 总体风格样式 */
+* {                    /* 消除内外边距 */
+    margin: 0;
+    padding: 0;
+}
+
+.w {
+    width: 970px;      /* 版心 */
+    margin: auto;      /* 版心宽度和页面居中 */
+}
+
+li {
+    list-style: none;   /* 去掉无序列表的圆点 */
+}
+
+a {
+    text-decoration: none; /* 所有链接都去掉下划线 */
+}
+/* 清除浮动代码 */
+.clearfix:before,.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear:both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+body {
+    background-color: #ffffff; /* 整个页面的背景颜色 */
+}
+
+button {
+    outline: none; /* 去掉鼠标点击button时出现的傻傻的蓝色边框 */
+}
+
+input {
+    outline: none;
+}
+/* 头部风格样式开始 */
+.header {
+    height: 53px;
+    border-bottom: 1px solid #cdd6dd;
+}
+
+.insideheader {
+    height: 53px;
+}
+
+.logo {
+    float: left;
+    width: 198px;
+    height: 53px;
+}
+/* 搜索模块 */
+.search {
+    float: left;
+    width: 528px;
+    height: 38px;
+    margin-left: -86px;
+    margin-top: 7px;
+}
+
+.search input {
+    float: left;
+    width: 458px;
+    height: 36px;
+    border: none;
+    color: #667786; /* 修改 input value 里面的文字颜色 */
+    font-size: 16px;  /* 修改 input value 里面的文字大小 */
+    padding-left: 15px; /* 设置input value 里面的文字和边框的左边距 会撑大盒子 */
+    background-color: #e6ecf0;
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 9999px;         /* 从推特那里’偷‘来的圆角写法 */
+    border-top-right-radius: 9999px;
+    outline: none;
+}
+.admin-image {
+    float: left;
+    height: 53px;
+    margin-left: 55px;
+}
+
+.adminimg {
+    margin-top: 12px;
+}
+
+.admin-id {
+    float: left;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.logout button {
+    float: right;
+    width: 98.22px;
+    height: 30px;
+    margin-top: 11px;
+    border: 1px solid #2aa3ef ;
+    margin-right: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #2aa3ef;
+    cursor:pointer; /* 鼠标经过按钮变成小手手 */
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;      /* 从推特那里’偷‘来的圆角写法 */
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+}
+
+.logout button:hover {
+    background-color: #2593db;
+}
+/* 头部风格样式结束 */
+
+.mainbody {
+
+}
+
+.mainbody-hd {
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+}
+
+.mainbody-bd ul {
+    width: 970px;
+}
+
+.mainbody-bd ul li {
+    float: left;
+    width: 288px;
+    height: 330px;
+    margin-bottom: 12px;
+    margin-left: 12px; /* 每个小li之间的空隙*/
+    background-color: #fff;
+    border: 1px solid #e6ecf0;
+}
+
+.mainbody-bd ul li {
+    width: 300px;
+}
+
+.mainbody-bd img {
+    max-width:300px;
+    max-height:200px;
+}
+
+.mainbody-bd ul li h4 {
+    margin: 20px 20px 20px 25px; /* 右20左25 */
+    font-size: 15px;
+    color: #050505;
+    font-weight: 700; /* 不加粗 */
+}
+
+.mainbody-bd .info {
+    margin: 0 20px 0px 25px;
+    font-size: 13px;
+}
+
+.mainbody-bd .info .left {
+    color: #2aa3ef;
+}
+
+.mainbody-bd .info .right {
+    color: #69777f;
+    margin-left: 10px;
+}
+
+.mainbody-bd button {
+    float: right;
+    width: 98.22px;
+    height: 18px;
+    border: 1px solid #2aa3ef ;
+    margin-right: -5px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #2aa3ef;
+    background-color: #ffffff;
+    cursor:pointer; /* 鼠标经过按钮变成小手手 */
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;      /* 从推特那里’偷‘来的圆角写法 */
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+}
+.mainbody-bd button:hover {
+    background-color: #e9f6fd;
+}
+
+/* footer模块 */
+.footer {
+    height: 53px;
+    text-align: center;
+    line-height: 53px;
+    border-top: 1px solid #cdd6dd;
+}

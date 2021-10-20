@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>homepage</title>
+    <link rel="stylesheet" href="./stylesheets/homepage.css">
+    <link rel="stylesheet" href="./stylesheets/homepage-col1.css">
+    <link rel="stylesheet" href="./stylesheets/homepage-col2.css">
+    <link rel="stylesheet" href="./stylesheets/homepage-col3.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/popUpStyle.css">
+    <script type="text/javascript" src="./js/homepage.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDExmNByjoDRWwhPmJyTzUN35I_clOUpLI&libraries=places&callback=initMap&language=en&reigion=CA"
+    async defer></script>
+    <script src="./js/scriptOfpopUpForRecommend.js"></script>
+  </head>
+  <body>
+      <div class="wrapper">
+        <div class="mainbody">
+
+          <div class="navbar">
+            <div class="navbar-home">
+              <a class="navbar-home-icon" href="./homepage.html">
+                <img src="./images/house.svg" alt="">
+              </a>
+              <button class="navbar-home-logout" name="logout" onclick="window.location.href='./huntvan.html'">Logout</button>
+            </div>
+
+          </div>
+
+          <!-- 左部用户界面 -->
+          <div class="col1">
+            <div class="col1-follower-box">
+              <div class="col1-follower-box-user-info-wrapper">
+                <div class="col1-follower-box-user-icon">
+                  <form class="" action="/editprofile" method="post">
+
+                    <input type="hidden" name="email" value=<%= email %>>
+                    <input type="image" alt="submit" src=<%= icon %> >
+                  </form>
+                </div>
+                <div class="col1-follower-box-user-name">
+                  <p class="col1-user-text-name"><%= username %></p>
+                  <p class="col1-user-text-email"><%= email %></p>
+                </div>
+                <div class="col1-follower-box-toolbar row">
+                  <div class="col1-follower-box-toolbar-col1">
+                    <a href="./404pagenotfound.html">
+                      <span class="col1-posts-toolbar-title">Posts</span>
+                      <% var count = 0 %>
+                      <% for (let i = 0; i < rows.length; i++){ %>
+
+                          <% if (email ==  rows[i].post_email){ %>
+                              <% count++ %>
+                        <%  } %>
+
+                          <% } %>
+                      <span class="col1-posts-toolbar-count"><%= count %></span>
+                    </a>
+                  </div>
+                  <div class="col1-follower-box-toolbar-col2">
+                    <a href="./404pagenotfound.html">
+                      <span class="col1-posts-toolbar-title">Following</span>
+                      <% var ufolcount = 0 %>
+                      <% var ffolcount = 0 %>
+                      <% for (let i = 0; i < follower.length; i++){ %>
+
+                          <% if (email ==  follower[i].femail){ %>
+                              <% ufolcount++ %>
+                        <%  }if (email == follower[i].uemail){ %>
+                              <% ffolcount++ %>
+
+
+                          <%   }} %>
+                      <span class="col1-posts-toolbar-count"><%= ufolcount %></span>
+                    </a>
+                  </div>
+                  <div class="col1-follower-box-toolbar-col3">
+                    <a href="./404pagenotfound.html">
+                      <span class="col1-posts-toolbar-title">Follower</span>
+                      <span class="col1-posts-toolbar-count"><%= ffolcount %></span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col1-follower-box-banner">
+                <img src="./images/mod.png" >
+              </div>
+            </div>
+
+            <!-- 导航栏 -->
+            <div class="col1-navbar">
+                <br> <a href="./404pagenotfound.html"><button class="col1-navbar-content">Restaurant</button></a><br><br>
+                <a href="./404pagenotfound.html"><button class="col1-navbar-content">Café</button></a><br><br>
+                <a href="./404pagenotfound.html"><button class="col1-navbar-content">Store</button></a><br><br>
+                <a href="./404pagenotfound.html"><button class="col1-navbar-content">Fun</button></a><br><br>
+                <a href="./404pagenotfound.html"><button class="col1-navbar-content">Park</button></a><br><br>
+                <a href="./404pagenotfound.html"><button class="col1-navbar-content">Travel</button></a><br><br>
+                <a href="./404pagenotfound.html"><button class="col1-navbar-content">Other</button></a><br><br>
+                <a href="./404pagenotfound.html"><button class="col1-navbar-content-button">Post</button></a>
+            </div>
+          </div>
+          <!-- 左部结束 -->
+
+
+          <!-- 中间发帖和帖子 -->
+          <div class="col2">
+
+            <form class="" action="/postitem" method="post" enctype="multipart/form-data">
+
+
+            <!-- 发帖 -->
+            <div class="col2-post">
+
+              <!-- username -->
+              <input type="hidden" name="username" value = <%= username %>>
+              <input type="hidden" name="email" value = <%= email %>>
+
+              <!-- 发帖人物头像 -->
+              <div class="col2-post-icon">
+                <img src="./images/user-icon.png" >
+              </div>
+
+              <!-- 发帖输入格 -->
+              <div class="col2-post-text">
+                <textarea id="col2-post-text-title" maxlength="100" placeholder="Title" name = "title"></textarea>
+                <textarea id="col2-post-text-container" maxlength="" placeholder="What's new" name = "post_text"></textarea>
+
+              </div>
+
+              <!-- 发帖工具栏 -->
+              <div class="col2-post-toolbar">
+                  <div class="col2-post-toolbar-button" style="cursor: pointer">
+                    <input type="file" id="btn-1" style="display:none" onchange="submitting(this)" accept="image/png, image/jpeg, image/gif, image/jpg" name ="photo">
+                    <img src="./images/folder.svg" onclick="openImage()">
+                  </div>
+
+                  <div class="col2-post-toolbar-button">
+                    <img src="./images/placeholder.svg">
+                    <input id="col2-post-toolbar-autocomplete" placeholder="Enter a city" type="text" name="place">
+
+
+                  </div>
+                  <input type="hidden" id="latt" name="latt" value="">
+                  <input type="hidden" id="lngg" name="lngg" value="">
+
+                  <div class="col2-post-toolbar-button">
+                    <img src="./images/money.svg">
+                    <select id="col2-post-toolbar-button-select" name = "budget">
+                      <option value ="$">$</option>
+                      <option value ="$$">$$</option>
+                      <option value="$$$">$$$</option>
+                      <option value="$$$$">$$$$</option>
+                      <option value="$$$$$">$$$$$</option>
+                    </select>
+                  </div>
+
+                  <input type="hidden" name="icon" value=<%= icon %>>
+                  <div class="col2-post-toolbar-button">
+                    <input class="col2-post-toolbar-post" type="submit" onclick="printText()" value="Post">
+                  </div>
+              </div>
+              <img src="" id="col2-post-text-image">
+
+            </div>
+            </form>
+
+
+            <!-- 帖子 -->
+            <div class="col2-posts">
+              <!-- 空行 -->
+              <div class="col2-posts-space"></div>
+
+              <!-- db 贴子 -->
+
+              <% var followeduser = [] %>
+              <% for (let i = 0; i < follower.length; i++){ %>
+
+                  <% if (email ==  follower[i].femail){ %>
+                    <% followeduser.push(follower[i].uemail) %>
+
+              <% }} %>
+              <% followeduser.push(email) %>
+
+              <%
+                rows.forEach(function(r){
+              %>
+              <% r.id %>
+              <% r.post_user %>
+              <% r.post_text %>
+              <% r.image_name %>
+              <% r.location %>
+              <% r.budget %>
+              <% r.icon %>
+
+
+
+
+
+              <% for (let i = 0; i < followeduser.length; i++){ %>
+                    <% if (r.post_email == followeduser[i]){ %>
+
+
+
+              <div class="col2-posts-content">
+                <!-- 贴主信息 -->
+
+                <div class="col2-posts-author">
+                  <div class="col2-posts-author-icon">
+                    <form class="" action="/info" method="post">
+                      <input type="hidden" name="email" value=<%= r.post_email %>>
+
+
+                    <input type="image" name="usericon" class="usericon" src=<%= r.icon %> alt="submit">
+                    </form>
+                  </div>
+                  <div class="col2-posts-author-info">
+                    <span class="col2-posts-author-info-name"><%= r.post_user %></span>
+                    <span class="col2-posts-author-info-email"><%= r.post_email %></span>
+                  </div>
+                </div>
+
+                <!-- 主体 -->
+
+
+                <form class="" action="/popup" method="post">
+                  <input type="hidden" name="postid" id="changeid" value=<%= r.id %>>
+                  <input type="hidden" name="comment_email" value=<%= email %>>
+
+                <div class="col2-posts-main">
+                  <% if (r.image_name){ %>
+                  <input class = "photo" type="image" id="p1" alt="submit" src=<%= r.image_name %> >
+                  <% } %>
+                    <h4>
+                      <%= r.post_text %>
+                    </h4>
+                </div>
+                </form>
+                <!-- 地区 -->
+                <div class="col2-posts-content-info">
+                  <a href="googlemapapi/labattoir.html"><span class="col2-posts-content-info-left"><%= r.location %></span></a>
+                  <span class="col2-posts-content-info-right"><%= r.budget %></span>
+                </div>
+
+                <!-- 工具栏 -->
+                <div class="col2-posts-toolbar">
+
+                  <form class="" action="/popup" method="post">
+                    <input type="hidden" name="postid" id="changeid" value=<%= r.id %>>
+                    <input type="hidden" name="comment_email" value=<%= email %>>
+                  <div class="col2-posts-toolbar-button" >
+                    <input id="popupcomment" type="image" alt="submit" src="./images/chat-1.svg">
+                  </div>
+                </form>
+
+
+
+
+
+                </div>
+
+
+
+
+
+
+
+                    <script src="popup.js">
+
+                    </script>
+
+
+
+              </div>
+
+                          <%  }}  %>
+
+                <% }); %>
+
+              <!-- 帖子1 -->
+              <div class="col2-posts-content">
+                <!-- 贴主信息 -->
+                <div class="col2-posts-author">
+                  <div class="col2-posts-author-icon">
+                    <img src="./images/user-icon.png" >
+                  </div>
+                  <div class="col2-posts-author-info">
+                    <span class="col2-posts-author-info-name">user1</span>
+                    <span class="col2-posts-author-info-email">@email</span>
+                  </div>
+                </div>
+
+                <!-- 主体 -->
+                <div class="col2-posts-main">
+                  <img src="./images/abattoir.jpg" alt="">
+                    <h4>
+                      A lovely restaurant you should not miss!
+                    </h4>
+                </div>
+
+                <!-- 地区 -->
+                <div class="col2-posts-content-info">
+                  <a href="googlemapapi/labattoir.html"><span class="col2-posts-content-info-left">L'Abattoir</span></a>
+                  <span class="col2-posts-content-info-right">$$$</span>
+                </div>
+
+                <!-- 工具栏 -->
+                <div class="col2-posts-toolbar">
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/chat-1.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/like.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/star.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/share.svg">
+                  </div>
+                </div>
+              </div>
+
+              <!-- 帖子2 -->
+              <div class="col2-posts-content">
+                <!-- 贴主信息 -->
+                <div class="col2-posts-author">
+                  <div class="col2-posts-author-icon">
+                    <img src="./images/user-icon.png" >
+                  </div>
+                  <div class="col2-posts-author-info">
+                    <span class="col2-posts-author-info-name">user2</span>
+                    <span class="col2-posts-author-info-email">@email</span>
+                  </div>
+                </div>
+
+                <!-- 主体 -->
+                <div class="col2-posts-main">
+                  <img src="./images/northvan.jpg" alt="">
+                    <h4>
+                      A cute place to view the downtown sight!
+                    </h4>
+                </div>
+
+                <!-- 地区 -->
+                <div class="col2-posts-content-info">
+                  <a href="googlemapapi/burraddrydock.html"><span class="col2-posts-content-info-left">Burrard Dry Dock</span></a>
+                  <span class="col2-posts-content-info-right">$</span>
+                </div>
+
+                <!-- 工具栏 -->
+                <div class="col2-posts-toolbar">
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/chat-1.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/like.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/star.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/share.svg">
+                  </div>
+                </div>
+              </div>
+
+              <!-- 帖子3 -->
+              <div class="col2-posts-content">
+                <!-- 贴主信息 -->
+                <div class="col2-posts-author">
+                  <div class="col2-posts-author-icon">
+                    <img src="./images/user-icon.png" >
+                  </div>
+                  <div class="col2-posts-author-info">
+                    <span class="col2-posts-author-info-name">user3</span>
+                    <span class="col2-posts-author-info-email">@email</span>
+                  </div>
+                </div>
+
+                <!-- 主体 -->
+                <div class="col2-posts-main">
+                  <img src="./images/whytecliff.jpg" alt="">
+                    <h4>
+                      You can climb rock and watch seal in this park!
+                    </h4>
+                </div>
+
+                <!-- 地区 -->
+                <div class="col2-posts-content-info">
+                  <a href="googlemapapi/whytecliffpark.html"><span class="col2-posts-content-info-left">Whytecliff Park</span></a>
+                  <span class="col2-posts-content-info-right">$</span>
+                </div>
+
+                <!-- 工具栏 -->
+                <div class="col2-posts-toolbar">
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/chat-1.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/like.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/star.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/share.svg">
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- 帖子4 -->
+              <div class="col2-posts-content">
+                <!-- 贴主信息 -->
+                <div class="col2-posts-author">
+                  <div class="col2-posts-author-icon">
+                    <img src="./images/user-icon.png" >
+                  </div>
+                  <div class="col2-posts-author-info">
+                    <span class="col2-posts-author-info-name">user4</span>
+                    <span class="col2-posts-author-info-email">@email</span>
+                  </div>
+                </div>
+
+                <!-- 主体 -->
+                <div class="col2-posts-main">
+                  <img src="./images/chinesebbq.jpg" alt="">
+                    <h4>
+                      Come and try this mouth watering Chinese BBQ!
+                    </h4>
+                </div>
+
+                <!-- 地区 -->
+                <div class="col2-posts-content-info">
+                  <a href="googlemapapi/chinatownbbq.html"><span class="col2-posts-content-info-left">Chinatown BBQ</span></a>
+                  <span class="col2-posts-content-info-right">$</span>
+                </div>
+
+                <!-- 工具栏 -->
+                <div class="col2-posts-toolbar">
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/chat-1.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/like.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/star.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/share.svg">
+                  </div>
+                </div>
+              </div>
+
+              <!-- 帖子5 -->
+              <div class="col2-posts-content">
+                <!-- 贴主信息 -->
+                <div class="col2-posts-author">
+                  <div class="col2-posts-author-icon">
+                    <img src="./images/user-icon.png" >
+                  </div>
+                  <div class="col2-posts-author-info">
+                    <span class="col2-posts-author-info-name">user4</span>
+                    <span class="col2-posts-author-info-email">@email</span>
+                  </div>
+                </div>
+
+                <!-- 主体 -->
+                <div class="col2-posts-main">
+                  <img src="./images/garibaldi.jpg" alt="">
+                    <h4>
+                      A must go hiking resort with 2 hour drive from vancouver.
+                    </h4>
+                </div>
+
+                <!-- 地区 -->
+                <div class="col2-posts-content-info">
+                  <a href="googlemapapi/marinedrive.html"><span class="col2-posts-content-info-left">Marine Drive</span></a>
+                  <span class="col2-posts-content-info-right">$</span>
+                </div>
+
+                <!-- 工具栏 -->
+                <div class="col2-posts-toolbar">
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/chat-1.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/like.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/star.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/share.svg">
+                  </div>
+                </div>
+              </div>
+
+              <!-- 帖子6 -->
+              <div class="col2-posts-content">
+                <!-- 贴主信息 -->
+                <div class="col2-posts-author">
+                  <div class="col2-posts-author-icon">
+                    <img src="./images/user-icon.png" >
+                  </div>
+                  <div class="col2-posts-author-info">
+                    <span class="col2-posts-author-info-name">11111111111111</span>
+                    <span class="col2-posts-author-info-email">@email</span>
+                  </div>
+                </div>
+
+                <!-- 主体 -->
+                <div class="col2-posts-main">
+                  <img src="./images/porsche.jpg" alt="">
+                    <h4>
+                      Don't miss the upcoming Porshce meet up this Father's Day!
+                    </h4>
+                </div>
+
+                <!-- 地区 -->
+                <div class="col2-posts-content-info">
+                  <a href="googlemapapi/garibaldilake.html"><span class="col2-posts-content-info-left">Garibaldi Lake</span></a>
+                  <span class="col2-posts-content-info-right">$</span>
+                </div>
+
+                <!-- 工具栏 -->
+                <div class="col2-posts-toolbar">
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/chat-1.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/like.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/star.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/share.svg">
+                  </div>
+                </div>
+              </div>
+
+              <!-- sample end -->
+
+            </div>
+            <!-- 帖子结束 -->
+          </div>
+          <!-- 中间结束 -->
+
+
+          <!-- 右部推荐栏 -->
+          <div class="col3">
+            <!-- 搜索栏 -->
+              <form class="search" action="./404pagenotfound.html" method="get">
+                  <input class="search-container" type="text" id="search" placeholder="Search post">
+              </form>
+
+              <!-- 推荐帖子 -->
+
+
+              <!-- 推荐关注 -->
+              <div class="recommend-box">
+                <div class="recommend-box-title">
+                  <span class="recommend-box-title-name">Who to follow</span>
+                </div>
+
+
+                <script type="text/javascript">
+                function checkAdult(email) {
+                  return email = 18;
+                  }
+                </script>
+
+                <!-- people1 -->
+                <% var usertofol = [] %>
+                  <% var usertofolname = [] %>
+                  <% var usertofolicon = [] %>
+                  <% var followedu = [] %>
+
+                  <% for (let i = 0; i < follower.length; i++){ %>
+
+                      <% if (email ==  follower[i].femail){ %>
+                        <% followedu.push(follower[i].uemail) %>
+
+
+                  <% }} %>
+
+
+                <% for (let i = 0; i < users.length; i++){ %>
+
+                    <% if (email !=  users[i].email){ %>
+                      <% if (users[i].email != "huntvan@gmail.com"){ %>
+                      <% if (followedu.indexOf(users[i].email) == -1){ %>
+                      <% usertofol.push(users[i].email) %>
+                      <% usertofolname.push(users[i].name) %>
+                      <% usertofolicon.push(users[i].icon) %>
+
+                <% }}}} %>
+
+
+
+                  <!--% for (let j = 0; j< usertofol.length; j++){ %-->
+                    <% for (let j = 0; j< 4; j++){ %>
+                      <% var random  = Math.floor(Math.random() * (usertofol.length)); %>
+                    <div class="recommend-box-content">
+                        <div class="recommend-box-content-people">
+                          <div class="recommend-box-content-people-icon">
+                            <img src=<%= usertofolicon[random] %>>
+                          </div><br>
+                          <span class="recommend-box-content-people-name"><%= usertofolname[random] %></span> <br>
+                          <span class="recommend-box-content-people-email"><%= usertofol[random]%></span> <br>
+                          <iframe name="dummyfollow" id="dummyfollow" style="display: none;"></iframe>
+                          <form class="" action="/follow" method="post" target="dummyfollow">
+
+                            <input type="hidden" name="username" value=<%= usertofolname[random] %>>
+                            <input type="hidden" name="femail" value=<%= email %>>
+                            <input type="hidden" name="uemail" value=<%= usertofol[random] %>>
+                            <input type="hidden" name="followsta" id="followsta" value="1">
+
+                          <input type="submit" id="followstatus" class="recommend-box-content-people-follow" value="follow" onclick:"changefollowstatus()"> <br>
+
+                          </form>
+
+                        </div>
+                    </div>
+
+                <% } %>
+
+
+
+
+                <!-- sample end -->
+
+
+                <div class="recommend-box-more">
+                  <a href="//www.baidu.com/"><button class="recommend-box-more-text">Show more</button></a>
+                </div>
+              </div>
+          </div>
+          <!-- 右部推荐栏结束 -->
+        </div>
+      </div>
+  </body>
+</html>

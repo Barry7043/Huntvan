@@ -1,0 +1,171 @@
+#p1{
+  object-fit: cover;
+  width: 30%;
+}
+#p2{
+  object-fit: cover;
+  width: 10%;
+}
+#p3{
+  object-fit: cover;
+  width: 10%;
+}
+
+.modal{
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal .container{
+    display: block;
+    width: 800px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-sizing: border-box;
+    border-radius: 0px;//弹窗四个角弧度半径
+    padding: 1em;
+}
+#left{
+    position:absolute;
+    top:0;
+    left:0;
+    width:500px;
+    height:100%;
+    background-color:#CCCCCC
+}
+#photoInLeft{
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+}
+#right{
+    margin-left:500px;
+    width:300px;
+    height:100%;
+    background-color:white;
+}
+#poster{
+    width: 300px;
+    height:40px;
+}
+#posterInfo1{
+    top:0;
+    left:0;
+    width:45px;
+    height:100%;
+    float:left;
+}
+#icon{
+    height:35px;
+    margin-top: 2.5px;
+    margin-bottom: auto;
+    margin-left: 3px;
+    cursor: pointer;
+}
+#posterName{
+    margin-left:0px;
+    width:auto;
+    height:100%;
+    float:left;
+}
+#posterNameText{
+    height:auto;
+    width:auto;
+    padding-top: 10px;
+    margin:0 0 0 0;
+    text-align:left;
+    cursor: pointer;
+}
+#follow{
+    margin-right:0px;
+    width:50px;
+    height:100%;
+    float:left;
+}
+#followStatu{
+    height:25px;
+    margin-top: 8px;
+    margin-bottom: auto;
+    cursor: pointer;
+}
+#contentOfPost{
+    width: 300px;
+    height:80px;
+    background-color: AliceBlue;
+}
+#popUpCommentData{
+    overflow: auto;
+    height: 240px;
+}
+#likeAndSend{
+    height:40px;
+    background-color: white;
+    border-bottom: solid 1px AliceBlue;
+    border-top: solid 1px AliceBlue;
+}
+#heart{
+    margin-left:10px;
+    height:100%;
+    top:0;
+    left:0;
+    cursor: pointer;
+}
+#send{
+    margin-left:200px;
+    height:100%;
+    top:0;
+    left:0;
+    cursor: pointer;
+}
+#popUpComment{
+    height:100px;
+    bottom:0;
+    right:0;
+}
+#popUpText{
+    height:100px;
+    width: 300px;
+    padding: 0px;
+    resize: none;
+    border-left:0px;
+    border-top:0px;
+    border-right:0px;
+    border-bottom:1px;
+}
+
+#commentPoster{
+    width: 300px;
+    height:40px;
+}
+#commentName{
+    height:auto;
+    width:auto;
+    padding-top: 10px;
+    margin-left: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align:left;
+    cursor: pointer;
+    border-top: solid 2px AliceBlue;
+}
+#commentContent{
+    height:auto;
+    width:auto;
+    padding-top: 10px;
+    margin-left: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align:left;
+    font-size:11px;
+}

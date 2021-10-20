@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>test</title>
+
+<link rel="stylesheet" type="text/css" href="./stylesheets/popUpStyle.css">
+
+
+</head>
+
+<body>
+  <!-- 请放在个人主页的最后 -->
+
+
+  <div class="modal" id="cover">
+      <div class="container" id="cover_container" >
+        <%
+          rows.forEach(function(r){
+        %>
+        <% r.id %>
+        <% r.post_email %>
+        <% r.post_user %>
+        <% r.post_text %>
+        <% r.image_name %>
+        <% r.location %>
+        <% r.budget %>
+        <% r.likes %>
+        <div id="left">
+            <img src=<%= r.image_name %> alt="" id="photoInLeft">
+        </div>
+        <div id="right">
+            <div class="poster" id="poster">
+              <div id="posterInfo1">
+                  <img src=<%= r.icon %> alt="" id="icon">
+                  <!-- 需要渲染poster的icon -->
+              </div>
+              <div class="" id="posterName">
+                  <h5 id="posterNameText">
+                      <%= r.post_user %>
+                      <!-- 需要渲染poster的id 默认404 Not Found-->
+                  </h5>
+              </div>
+              <iframe name="dummyfollow" id="dummyfollow" style="display: none;"></iframe>
+              <form class="" action="/follow" method="post" target="dummyfollow">
+
+
+              <div class="" id="follow">
+                <input type="image" src="notFollowed.png" alt="submit" id="followStatu" name="follow" >
+                <input type="hidden" name="username" value=<%= r.post_user %>>
+                <input type="hidden" name="femail" value=<%= email %>>
+                <input type="hidden" name="uemail" value=<%= r.post_email %>>
+                <input type="hidden" name="followsta" id="followsta" value="0">
+
+                <!-- 需要渲染poster的follow状态 -->
+              </div>
+              </form>
+            </div>
+            <div class="" id="contentOfPost">
+              <%= r.post_text %>
+                <!-- show contentOfPost from the database -->
+            </div>
+            <div class="popUpCommentData" id="popUpCommentData">
+              <% for (let j = 0; j < commentrows.length; j++){ %>
+
+                  <% if (r.id ==  commentrows[j].post_id){ %>
+                    <div id="commentPoster">
+                    <h5 id="commentName" ><%= commentrows[j].comment_person %></h5><br>
+                  </div>
+                  <div id="commentPoster">
+                    <p id="commentContent" ><%= commentrows[j].content %></p><br>
+                  </div>
+
+
+                <%  } %>
+
+                  <% } %>
+                <!-- show comments from the database -->
+            </div>
+            <div class="comment">
+                  <iframe name="dummylike" id="dummylike" style="display: none;"></iframe>
+                  <form class="" action="/like" method="post" target="dummylike">
+
+                    <div class="" id="likeAndSend">
+                        <input type="image" src="notLiked.png" alt="submit" id="heart" name="heart">
+                        <input type="hidden" name="countheart" id = "countheart" value="0">
+                        <!-- 需要渲染，默认未点赞！！！ -->
+                        <input type="hidden" name="postid" id ="postp" value=<%= r.id %>>
+                        <input type="hidden" name="likes" id ="like" value=<%= r.likes %>>
+
+                    </div>
+                  </form>
+
+                    <form class="" action="/commend" method="post">
+
+                    <div class="" id="likeAndSend">
+                        <input class="photo" type="image" src="send.png" alt="submit" id="send">
+                        <!-- 代替submit按钮 -->
+                    </div>
+
+                    <input type="hidden" name="countheart" id = "countheart" value="0">
+                    <input type="hidden" name="postid" id ="postp" value=<%= r.id %>>
+                    <input type="hidden" name="likes" id ="like" value=<%= r.likes %>>
+                    <input type="hidden" name="comment_email" value=<%= email %>>
+                    <!-- input type="hidden" name="comment_email" value=<%= email %> -->
+                    <form class="" action="/commend" method="post" id="popUpComment">
+                    <div class="" id="popUpText">
+                      <textarea id="popUpText" name="p_comment">
+                      </textarea>
+                    </div>
+                   </form>
+                 </div>
+               </div>
+               <%  }); %> </div> </div>
+
+
+  <script src="popup.js">
+
+  </script>
+</body>
+
+</html>

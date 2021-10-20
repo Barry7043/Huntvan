@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>homepage</title>
+    <link rel="stylesheet" href="./stylesheets/homepage.css">
+    <link rel="stylesheet" href="./stylesheets/homepage-col1.css">
+    <link rel="stylesheet" href="./stylesheets/homepage-col2.css">
+    <link rel="stylesheet" href="./stylesheets/homepage-col3.css">
+
+  </head>
+  <body>
+      <div class="wrapper">
+        <div class="mainbody">
+          <!-- 左部用户界面 -->
+          <div class="col1">
+            <div class="follower-box">
+              <div class="follower-box-user-info-wrapper">
+                <div class="follower-box-user-icon">
+                    <img src="./images/user-icon.png" >
+                </div>
+                <div class="follower-box-user-name">
+                  <p class="user-text-name"><%= username %></p>
+                  <p class="user-text-email">email</p>
+                </div>
+                <div class="follower-box-toolbar row">
+                  <div class="follower-box-toolbar-col1">
+                    <a href="//www.google.com/">
+                      <span class="posts-toolbar-title">Posts</span>
+                      <span class="posts-toolbar-count">1</span>
+                    </a>
+                  </div>
+                  <div class="follower-box-toolbar-col2">
+                    <a href="//www.google.com/">
+                      <span class="posts-toolbar-title">Following</span>
+                      <span class="posts-toolbar-count">2</span>
+                    </a>
+                  </div>
+                  <div class="follower-box-toolbar-col3">
+                    <a href="//www.google.com/">
+                      <span class="posts-toolbar-title">Follower</span>
+                      <span class="posts-toolbar-count">3</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="follower-box-banner">
+                <img src="./images/mod.png" >
+              </div>
+            </div>
+
+            <!-- 导航栏 -->
+            <div class="navbar">
+                <br> <a href="//www.google.com/"><button class="navbar-content">Restaurant</button></a><br><br>
+                <a href="//www.google.com/"><button class="navbar-content">Café</button></a><br><br>
+                <a href="//www.google.com/"><button class="navbar-content">Store</button></a><br><br>
+                <a href="//www.google.com/"><button class="navbar-content">Fun</button></a><br><br>
+                <a href="//www.google.com/"><button class="navbar-content">Park</button></a><br><br>
+                <a href="//www.google.com/"><button class="navbar-content">Travel</button></a><br><br>
+                <a href="//www.google.com/"><button class="navbar-content">Other</button></a><br><br>
+                <a href="//www.google.com/"><button class="navbar-content-button">Post</button></a>
+            </div>
+          </div>
+          <!-- 左部结束 -->
+
+
+          <!-- 中间发帖和帖子 -->
+          <div class="col2">
+            <div class="col2-home">
+              <a href="//www.google.com/">
+                <img src="./images/house.svg" alt="">
+              </a>
+            </div>
+
+            <!-- 发帖 -->
+            <div class="col2-post">
+              <!-- 发帖人物头像 -->
+              <div class="col2-post-icon">
+                <img src="./images/user-icon.png" >
+              </div>
+
+              <!-- 发帖输入格 -->
+              <div class="col2-post-text">
+                <form class="" action="//www.google.com/" method="get">
+                    <input class="col2-post-text-container" type="text" value="">
+                    <button class="col2-post-text-button" type="submit" name="Post">Post</button>
+                </form>
+              </div>
+
+              <!-- 发帖工具栏 -->
+              <div class="col2-post-toolbar">
+                  <div class="col2-post-toolbar-button">
+                    <img src="./images/folder.svg">
+                  </div>
+                  <div class="col2-post-toolbar-button">
+                    <img src="./images/link.svg">
+                  </div>
+                  <div class="col2-post-toolbar-button">
+                    <img src="./images/pie-chart.svg">
+                  </div>
+                  <div class="col2-post-toolbar-button">
+                    <img src="./images/placeholder.svg">
+                    <select>
+                      <option value ="volvo">Vancouver</option>
+                      <option value ="saab">Burnaby</option>
+                      <option value="opel">Richmond</option>
+                      <option value="audi">Surrey</option>
+                      <option value="audi">North Vancouver</option>
+                      <option value="audi">Bowen Island</option>
+                      <option value="audi">Lions Bay</option>
+                      <option value="audi">Pitt Meadows</option>
+                      <option value="audi">Maple Ridge</option>
+                      <option value="audi">White Rock</option>
+                    </select>
+                  </div>
+                  <div class="col2-post-toolbar-button">
+                    <img src="./images/money.svg">
+                    <select>
+                      <option value ="volvo">$</option>
+                      <option value ="saab">$$</option>
+                      <option value="opel">$$$</option>
+                      <option value="audi">$$$$</option>
+                      <option value="audi">$$$$$</option>
+                    </select>
+                  </div>
+              </div>
+            </div>
+
+            <!-- 帖子 -->
+            <div class="col2-posts">
+              <!-- 空行 -->
+              <div class="col2-posts-space"></div>
+
+              <!-- 帖子1 -->
+              <div class="col2-posts-content">
+                <!-- 贴主信息 -->
+                <div class="col2-posts-author">
+                  <div class="col2-posts-author-icon">
+                    <img src="./images/user-icon.png" >
+                  </div>
+                  <div class="col2-posts-author-info">
+                    <span class="col2-posts-author-info-name">user1</span>
+                    <span class="col2-posts-author-info-email">@email</span>
+                  </div>
+                </div>
+
+                <!-- 主体 -->
+                <div class="col2-posts-main">
+                  <img src="./images/abattoir.jpg" alt="">
+                    <h4>
+                      A lovely restaurant you should not miss!
+                    </h4>
+                </div>
+
+                <!-- 地区 -->
+                <div class="col2-posts-content-info">
+                  <span class="col2-posts-content-info-left">Gastwon</span>
+                  <span class="col2-posts-content-info-right">$$$</span>
+                </div>
+
+                <!-- 工具栏 -->
+                <div class="col2-posts-toolbar">
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/chat-1.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/like.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/star.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/share.svg">
+                  </div>
+                </div>
+              </div>
+
+              <!-- 帖子2 -->
+              <div class="col2-posts-content">
+                <!-- 贴主信息 -->
+                <div class="col2-posts-author">
+                  <div class="col2-posts-author-icon">
+                    <img src="./images/user-icon.png" >
+                  </div>
+                  <div class="col2-posts-author-info">
+                    <span class="col2-posts-author-info-name">user2</span>
+                    <span class="col2-posts-author-info-email">@email</span>
+                  </div>
+                </div>
+
+                <!-- 主体 -->
+                <div class="col2-posts-main">
+                  <img src="./images/northvan.jpg" alt="">
+                    <h4>
+                      A cute place to view the downtown sight!
+                    </h4>
+                </div>
+
+                <!-- 地区 -->
+                <div class="col2-posts-content-info">
+                  <span class="col2-posts-content-info-left">North Vancouver</span>
+                  <span class="col2-posts-content-info-right">$</span>
+                </div>
+
+                <!-- 工具栏 -->
+                <div class="col2-posts-toolbar">
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/chat-1.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/like.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/star.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/share.svg">
+                  </div>
+                </div>
+              </div>
+
+              <!-- 帖子3 -->
+              <div class="col2-posts-content">
+                <!-- 贴主信息 -->
+                <div class="col2-posts-author">
+                  <div class="col2-posts-author-icon">
+                    <img src="./images/user-icon.png" >
+                  </div>
+                  <div class="col2-posts-author-info">
+                    <span class="col2-posts-author-info-name">user3</span>
+                    <span class="col2-posts-author-info-email">@email</span>
+                  </div>
+                </div>
+
+                <!-- 主体 -->
+                <div class="col2-posts-main">
+                  <img src="./images/whytecliff.jpg" alt="">
+                    <h4>
+                      You can climb rock and watch seal in this park!
+                    </h4>
+                </div>
+
+                <!-- 地区 -->
+                <div class="col2-posts-content-info">
+                  <span class="col2-posts-content-info-left">West Vancouver</span>
+                  <span class="col2-posts-content-info-right">$</span>
+                </div>
+
+                <!-- 工具栏 -->
+                <div class="col2-posts-toolbar">
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/chat-1.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/like.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/star.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/share.svg">
+                  </div>
+                </div>
+              </div>
+
+
+              <!-- 帖子4 -->
+              <div class="col2-posts-content">
+                <!-- 贴主信息 -->
+                <div class="col2-posts-author">
+                  <div class="col2-posts-author-icon">
+                    <img src="./images/user-icon.png" >
+                  </div>
+                  <div class="col2-posts-author-info">
+                    <span class="col2-posts-author-info-name">user4</span>
+                    <span class="col2-posts-author-info-email">@email</span>
+                  </div>
+                </div>
+
+                <!-- 主体 -->
+                <div class="col2-posts-main">
+                  <img src="./images/chinesebbq.jpg" alt="">
+                    <h4>
+                      Come and try this mouth watering Chinese BBQ!
+                    </h4>
+                </div>
+
+                <!-- 地区 -->
+                <div class="col2-posts-content-info">
+                  <span class="col2-posts-content-info-left">West Vancouver</span>
+                  <span class="col2-posts-content-info-right">$</span>
+                </div>
+
+                <!-- 工具栏 -->
+                <div class="col2-posts-toolbar">
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/chat-1.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/like.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/star.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/share.svg">
+                  </div>
+                </div>
+              </div>
+
+              <!-- 帖子5 -->
+              <div class="col2-posts-content">
+                <!-- 贴主信息 -->
+                <div class="col2-posts-author">
+                  <div class="col2-posts-author-icon">
+                    <img src="./images/user-icon.png" >
+                  </div>
+                  <div class="col2-posts-author-info">
+                    <span class="col2-posts-author-info-name">user4</span>
+                    <span class="col2-posts-author-info-email">@email</span>
+                  </div>
+                </div>
+
+                <!-- 主体 -->
+                <div class="col2-posts-main">
+                  <img src="./images/garibaldi.jpg" alt="">
+                    <h4>
+                      A must go hiking resort with 2 hour drive from vancouver.
+                    </h4>
+                </div>
+
+                <!-- 地区 -->
+                <div class="col2-posts-content-info">
+                  <span class="col2-posts-content-info-left">Squamish</span>
+                  <span class="col2-posts-content-info-right">$</span>
+                </div>
+
+                <!-- 工具栏 -->
+                <div class="col2-posts-toolbar">
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/chat-1.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/like.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/star.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/share.svg">
+                  </div>
+                </div>
+              </div>
+
+              <!-- 帖子6 -->
+              <div class="col2-posts-content">
+                <!-- 贴主信息 -->
+                <div class="col2-posts-author">
+                  <div class="col2-posts-author-icon">
+                    <img src="./images/user-icon.png" >
+                  </div>
+                  <div class="col2-posts-author-info">
+                    <span class="col2-posts-author-info-name">11111111111111</span>
+                    <span class="col2-posts-author-info-email">@email</span>
+                  </div>
+                </div>
+
+                <!-- 主体 -->
+                <div class="col2-posts-main">
+                  <img src="./images/porsche.jpg" alt="">
+                    <h4>
+                      Don't miss the upcoming Porshce meet up this Father's Day!
+                    </h4>
+                </div>
+
+                <!-- 地区 -->
+                <div class="col2-posts-content-info">
+                  <span class="col2-posts-content-info-left">West Vancouver</span>
+                  <span class="col2-posts-content-info-right">$</span>
+                </div>
+
+                <!-- 工具栏 -->
+                <div class="col2-posts-toolbar">
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/chat-1.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/like.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/star.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/share.svg">
+                  </div>
+                </div>
+              </div>
+
+              <!-- sample end -->
+
+            </div>
+            <!-- 帖子结束 -->
+          </div>
+          <!-- 中间结束 -->
+
+
+          <!-- 右部推荐栏 -->
+          <div class="col3">
+            <!-- 搜索栏 -->
+              <form class="" action="//www.baidu.com/" method="get">
+                  <input class="search-container" type="text" id="search" value="">
+                  <button class="search-button" type="submit" name="search">Search</button>
+              </form>
+
+              <!-- 推荐帖子 -->
+              <div class="news-box">
+                <div class="news-box-title">
+                  <span class="news-box-title-name">What’s happening</span>
+                </div>
+
+                <!-- event1 -->
+                <div class="news-box-content">
+                  <h4 class="news-box-content-event">A lovely restaurant you should not miss!</h4>
+                </div>
+
+                <!-- event2 -->
+                <div class="news-box-content">
+                  <h4 class="news-box-content-event">A cute place to view the downtown sight!</h4>
+                </div>
+
+                <!-- event3 -->
+                <div class="news-box-content">
+                  <h4 class="news-box-content-event">You can climb rock and watch seal in this park!</h4>
+                </div>
+
+                <!-- event4 -->
+                <div class="news-box-content">
+                  <h4 class="news-box-content-event">Come and try this mouth watering Chinese BBQ!</h4>
+                </div>
+
+                <!-- event5 -->
+                <div class="news-box-content">
+                  <h4 class="news-box-content-event">A must go hiking resort with 2 hour drive from vancouver.</h4>
+                </div>
+                <!-- events end -->
+
+                <div class="news-box-more">
+                  <a href="//www.baidu.com/"><button class="news-box-more-text">Show more</button></a>
+                </div>
+              </div>
+
+              <!-- 推荐关注 -->
+              <div class="recommend-box">
+                <div class="recommend-box-title">
+                  <span class="recommend-box-title-name">Who to follow</span>
+                </div>
+
+                <!-- people1 -->
+                <div class="recommend-box-content">
+                    <div class="recommend-box-content-people">
+                      <div class="recommend-box-content-people-icon">
+                        <img src="./images/user-icon.png" >
+                      </div><br>
+                      <span class="recommend-box-content-people-name">User1</span> <br>
+                      <span class="recommend-box-content-people-email">email</span> <br>
+                      <span class="recommend-box-content-people-follow">Follow</span> <br>
+                    </div>
+                </div>
+
+                <!-- people2 -->
+                <div class="recommend-box-content">
+                    <div class="recommend-box-content-people">
+                      <div class="recommend-box-content-people-icon">
+                        <img src="./images/user-icon.png" >
+                      </div><br>
+                      <span class="recommend-box-content-people-name">User2</span> <br>
+                      <span class="recommend-box-content-people-email">12222222222222</span> <br>
+                      <span class="recommend-box-content-people-follow">Follow</span> <br>
+                    </div>
+                </div>
+
+                <!-- people3 -->
+                <div class="recommend-box-content">
+                    <div class="recommend-box-content-people">
+                      <div class="recommend-box-content-people-icon">
+                        <img src="./images/user-icon.png" >
+                      </div><br>
+                      <span class="recommend-box-content-people-name">sample Testttttttt</span> <br>
+                      <span class="recommend-box-content-people-email">1</span> <br>
+                      <span class="recommend-box-content-people-follow">Follow</span> <br>
+                    </div>
+                </div>
+
+                <!-- people4 -->
+                <div class="recommend-box-content">
+                    <div class="recommend-box-content-people">
+                      <div class="recommend-box-content-people-icon">
+                        <img src="./images/Quin.jpg" >
+                      </div><br>
+                      <span class="recommend-box-content-people-name">Mr.Quin</span> <br>
+                      <span class="recommend-box-content-people-email">mrquin33@live.com</span> <br>
+                      <span class="recommend-box-content-people-follow">Follow</span> <br>
+                    </div>
+                </div>
+                <!-- sample end -->
+
+
+                <div class="recommend-box-more">
+                  <a href="//www.baidu.com/"><button class="recommend-box-more-text">Show more</button></a>
+                </div>
+              </div>
+          </div>
+          <!-- 右部推荐栏结束 -->
+        </div>
+      </div>
+  </body>
+</html>

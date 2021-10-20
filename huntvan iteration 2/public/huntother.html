@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hunt Vancouver</title>
+    <link rel="stylesheet" href="huntvanstylesheets/huntother.css">
+</head>
+<body>
+        <!-- 头部区域开始 -->
+        <div class="header">
+            <!-- 头部版心模块 -->
+            <div class="insideheader w">
+                <!-- logo模块-->
+                <div class="logo">
+                    <img src="huntvanimages/8653.png" alt="">
+                </div>
+                <!-- 搜索栏模块 -->
+                <div class="search">
+                    <input type="text" placeholder="Search Hunt Van">
+                </div>
+                <!-- log in 链接, 可以成功跳转到 login.html, 然后输入用户名和密码再进入个人主页 -->
+                <div class="login">
+                    <button onclick="location.href='/login'" type="button">
+                        Log in</button>
+                </div>
+                <!-- sign up 链接， 可以成功跳转到 signup.html -->
+                <div class="signup">
+                    <button onclick="location.href='register'" type="button">
+                        Sign up</button>
+                </div>
+            </div>
+        </div>
+        <!-- 头部区域结束 -->
+
+        <!-- 主体区域开始 -->
+        <div class="mainbody w">
+            <!-- 左侧主要内容模块 -->
+            <div class="main">
+                <!-- Hunt 模块-->
+                <div class="hunt">
+                    <h2>Hunt</h2>
+                </div>
+                <!-- 导航栏部分, 导向本地链接 -->
+                <div class="nav">
+                    <ul>
+                        <li><a href="huntvan.html" class="foryou">For you</a></li>
+                        <li><a href="huntrestaurant.html" class="restaurant">Restaurant</a></li>
+                        <li><a href="huntcafe.html" class="cafe">Café</a></li>
+                        <li><a href="huntstore.html" class="store">Store</a></li>
+                        <li><a href="huntpark.html" class="park">Park</a></li>
+                        <li><a href="huntfun.html" class="fun">Fun</a></li>
+                        <li><a href="huntother.html" class="other">Other</a></li>
+                    </ul>
+                </div>
+                <!-- 展示帖子部分 3*2 一共6个帖子 -->
+                <div class="box-bd">
+                    <ul>
+                        <!-- 第一个帖子 -->
+                        <li id="odd">
+                            <img src="huntvanimages/other/IMG_3256.jpg" alt="">
+                            <h4>
+                                Come and pick some blueberries to home!
+                            </h4>
+                            <div class="info">
+                                 <a href="googlemapapi/wellers.html">
+                                    <span class="left">Weller's Blueberry Farm</span>
+                                 </a>
+                                 <span class="right">$</span>
+                            </div>
+                        </li>
+                        <!-- 第二个帖子 -->
+                        <li>
+                            <img src="" alt="">
+                            <h4>
+
+                            </h4>
+                            <div class="info">
+                                 <span class="left"></span>
+                                 <span class="right"></span>
+                            </div>
+                        </li>
+                        <!-- 第三个帖子 -->
+                        <li id="odd">
+                            <img src="" alt="">
+                            <h4>
+
+                            </h4>
+                            <div class="info">
+                                 <span class="left"></span>
+                                 <span class="right"></span>
+                            </div>
+                        </li>
+                        <!-- 第四个帖子 -->
+                        <li>
+                            <img src="" alt="">
+                            <h4>
+
+                            </h4>
+                            <div class="info">
+                                 <span class="left"></span>
+                                 <span class="right"></span>
+                            </div>
+                        </li>
+                        <!-- 第五个帖子 -->
+                        <li id="odd">
+                            <img src="" alt="">
+                            <h4>
+
+                            </h4>
+                            <div class="info">
+                                 <span class="left"></span>
+                                 <span class="right"></span>
+                            </div>
+                        </li>
+                        <!-- 第六个帖子 -->
+                        <li>
+                            <img src="" alt="">
+                            <h4>
+
+                            </h4>
+                            <div class="info">
+                                 <span class="left"></span>
+                                 <span class="right"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 左侧主要内容模块结束 -->
+
+            <!-- 右侧 logo, 广告语和快捷登陆模块 -->
+            <div class="aside">
+                <div class="asidebody">
+                    <!-- 大logo图片 -->
+                    <ul>
+                        <li id="right_logo">
+                            <img src="huntvanimages/2018-tourism-vancouver-new-logo-design-4.png" alt="">
+                        </li>
+                    </ul>
+                    <!-- 忽悠人的广告语 -->
+                    <div class="header">
+                        <h4>
+                            See what others hunting in Vancouver right now!
+                        </h4>
+                    </div>
+
+                    <!-- 快捷登陆模块之输入用户名模块 -->
+                    <!-- 表单模块插入 -->
+                    <form action="/login" method="post">
+                        <div class="username">
+                            <div class="usernamecombine">
+                                <div class="usernamemethod">
+                                    <span>
+                                        Phone, email, or username
+                                    </span>
+                                </div>
+                                     <input type="text" id="username" name="email">
+                                </div>
+                        </div>
+
+                        <!-- 快捷登陆模块之输入密码模块 -->
+                        <div class="password">
+                            <div class="passwordcombine">
+                                <div class="passwordmethod">
+                                    <span>
+                                         Password
+                                    </span>
+                                </div>
+                                     <input type="password" id="userpassword" name="password">
+                            </div>
+                        </div>
+                        <!-- 忘记密码链接 -->
+                        <a href="forgotpassword.html" class="forgotpassword" id="forgotpassword">
+                        <span>Forgot password?</span>
+                        </a>
+
+                        <!-- 这里需要处理一下, 点击login进入用户主页 -->
+                        <!-- login  和 signup 按钮 -->
+                        <div class="loginbut">
+                            <button type="submit" class="login">
+                                <span>Log In</span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <div class="or">
+                        <span>or</span>
+                    </div>
+                    <div class="signupbut" type="submit" onclick="location.href='/register'">
+                        <button class="signup">
+                            <span>Sign Up</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- 右侧 logo, 广告语和快捷登陆模块结束 -->
+        </div>
+        <!-- 主体区域结束 -->
+
+        <!-- footer制作 -->
+        <div class="footer">
+            <div class="w">
+                <!-- 左侧版权区域好像没有版权 -->
+                <div class="copyright">
+                    <img src="huntvanimages/198122.png" alt="">
+                    <p>Hunt van is a small online neighbour <br> who devotes to hunt stuff in Vancouver.</p>
+                    <a href="404pagenotfound.html" class="app">Download APP</a>
+                </div>
+
+                <div class="links">
+                    <dl>
+                        <dt>About Hunt Van</dt>
+                            <dd><a href="404pagenotfound.html">About</a>
+                            <dd><a href="404pagenotfound.html">Develop Team</a>
+                            <dd><a href="404pagenotfound.html">Bussiness Enquiry</a>
+                            <dd><a href="404pagenotfound.html">Job opportunity</a>
+                            <dd><a href="404pagenotfound.html">Donate</a>
+                    </dl>
+                <div>
+
+            </div>
+        </div>
+</body>
+</html>

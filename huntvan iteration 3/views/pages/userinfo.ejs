@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>huntvan</title>
+    <link rel="stylesheet" href="./stylesheets/userinfo.css">
+    <link rel="stylesheet" href="./stylesheets/userinfo-col1.css">
+    <link rel="stylesheet" href="./stylesheets/userinfo-col2.css">
+    <link rel="stylesheet" href="./stylesheets/userinfo-col3.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/scriptOfpopUpForRecommendStyle.css">
+    <script type="text/javascript" src="./js/userinfo.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDExmNByjoDRWwhPmJyTzUN35I_clOUpLI&libraries=geometry,places&callback=initMap&language=en&reigion=CA"
+    async defer></script>
+    <script src="./js/scriptOfpopUpForRecommend.js"></script>
+    <script src="./js/homepage.js"></script>
+
+  </head>
+  <body>
+      <div class="wrapper">
+        <div class="mainbody">
+
+          <div class="navbar">
+            <div class="navbar-home">
+              <a class="navbar-home-icon" href="./homepage">
+                <img src="./images/house.svg" alt="">
+              </a>
+              <button class="navbar-home-logout" name="logout" onclick="window.location.href='./homepage'">back</button>
+            </div>
+
+          </div>
+
+          <!-- 左部用户界面 -->
+
+          <!-- 左部结束 -->
+
+
+          <!-- 中间人物信息和帖子 -->
+          <div class="col2">
+
+            <!-- 人物信息 -->
+            <div class="col2-post">
+              <!-- user头像 -->
+              <div class="col2-bar1">
+                <div class="col2-post-icon">
+                  <img src="./images/user-icon.png" >
+                </div>
+                <iframe name="dummyfollow" id="dummyfollow" style="display: none;"></iframe>
+                <form class="" action="/follow" method="post" target="dummyfollow">
+
+                  <input type="hidden" name="username" value=<%= rows[0].post_user %>>
+                  <input type="hidden" name="femail" value=<%= email %>>
+                  <input type="hidden" name="uemail" value=<%= rows[0].post_email %>>
+                  <input type="hidden" name="followsta" id="followsta" value="1">
+
+                <input class="col2-post-follow" type="submit" onclick="change(this)" value="follow">
+
+                </form>
+
+              </div>
+
+              <!-- 发帖输入格 -->
+              <div class="col2-bar2">
+                <div class="col2-bar2-user">
+                  <p class="col2-bar2-name"><%= rows[0].post_user %></p>
+                  <p class="col2-bar2-email"><%= rows[0].post_email %></p>
+                </div>
+              </div>
+
+              <!-- 发帖工具栏 -->
+
+
+              <div class="col2-bar4">
+                <div class="col2-bar4-follow">
+                  <p class="col2-bar4-following-number">23</p>
+                  <p class="col2-bar4-following-text">Following</p>
+                  <p class="col2-bar4-follower-number">32</p>
+                  <p class="col2-bar4-follower-text">Follower</p>
+                </div>
+
+              </div>
+
+            </div>
+
+            <!-- 帖子 -->
+            <div class="col2-posts">
+
+              <!-- 空行 -->
+              <div class="col2-posts-space"></div>
+
+
+              <%
+                rows.forEach(function(r){
+              %>
+              <% r.id %>
+              <% r.post_user %>
+              <% r.post_text %>
+              <% r.image_name %>
+              <% r.location %>
+              <% r.budget %>
+
+              <div class="col2-posts-content">
+                <!-- 贴主信息 -->
+
+                <div class="col2-posts-author">
+                  <div class="col2-posts-author-icon">
+
+
+                    <img  name="usericon"  src="./images/user-icon.png">
+                  </div>
+                  <div class="col2-posts-author-info">
+                    <span class="col2-posts-author-info-name"><%= r.post_user %></span>
+                    <span class="col2-posts-author-info-email"><%= r.post_email %></span>
+                  </div>
+                </div>
+
+                <!-- 主体 -->
+
+                <div class="col2-posts-main">
+                  <input class = "photo" type="image" id="p1" alt="submit" src=<%= r.image_name %> >
+                    <h4>
+                      <%= r.post_text %>
+                    </h4>
+                </div>
+
+                <!-- 地区 -->
+                <div class="col2-posts-content-info">
+                  <a href="googlemapapi/labattoir.html"><span class="col2-posts-content-info-left"><%= r.location %></span></a>
+                  <span class="col2-posts-content-info-right"><%= r.budget %></span>
+                </div>
+
+                <!-- 工具栏 -->
+                <div class="col2-posts-toolbar">
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/chat-1.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/like.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/star.svg">
+                  </div>
+                  <div class="col2-posts-toolbar-button">
+                    <img src="./images/share.svg">
+                  </div>
+                </div>
+
+
+
+              <% }); %>
+
+              <!-- 帖子1 -->
+
+
+              <!-- sample end -->
+
+            </div>
+            <!-- 帖子结束 -->
+          </div>
+          <!-- 中间结束 -->
+
+
+          <!-- 右部推荐栏 -->
+
+          <!-- 右部推荐栏结束 -->
+        </div>
+      </div>
+  </body>
+</html>

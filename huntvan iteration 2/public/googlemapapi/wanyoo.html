@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDExmNByjoDRWwhPmJyTzUN35I_clOUpLI&sensor=false">
+</script>
+ 
+<script>
+  var myCenter=new google.maps.LatLng(49.2216004,-122.9977751);
+
+  function initialize()
+  {
+    var mapProp = {
+      center:myCenter,
+      zoom:10,
+      mapTypeId:google.maps.MapTypeId.ROADMAP
+    };
+    var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+    var marker = new google.maps.Marker({
+      position: myCenter,
+      title:'Click to zoom'
+    });
+
+    marker.setMap(map);
+
+    var infowindow = new google.maps.InfoWindow({
+    content:"6838 Jubilee Ave, Burnaby"
+    });
+
+    // Zoom to 9 when clicking on marker
+    google.maps.event.addListener(marker,'click',function() {
+    map.setZoom(15);
+    map.setCenter(marker.getPosition());
+    infowindow.open(map,marker);
+    });
+  }
+ 
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+</head>
+ 
+<body>
+  <div id="googleMap" style="width:1246px;height:770px"></div>
+ 
+</body>
+</html>

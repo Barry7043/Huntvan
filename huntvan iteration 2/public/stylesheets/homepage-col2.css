@@ -1,0 +1,205 @@
+.col2-post {
+  height: auto;
+}
+
+.col2-post-icon {
+  display:inline;
+  height: 60px;
+  width: 60px;
+  float: left;
+  background-color: yellow;
+  border-radius: 35px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.col2-post-icon img {
+  height: auto;
+  width: 60px;
+  border-radius: 30px;
+  border: 2px solid white;
+}
+
+.col2-post-text {
+  height: auto;
+}
+
+#col2-post-text-title {
+  height: 45px;
+  width: 650px;
+  margin-left: 20px;
+  margin-top: 7px;
+  border-radius: 20px;
+  border: 1px solid #e1e1e1;
+  font-size: 1.2em;
+  padding:5px 1.1em 5px;
+}
+
+#col2-post-text-container {
+  height: 150px;
+  width: 680px;
+  margin-left: 20px;
+  margin-top: 7px;
+  border-radius: 20px;
+  border: 1px solid #e1e1e1;
+  font-size: 1.1em;
+  text-indent:10px;
+  padding:5px 5px 5px;
+}
+
+
+
+#col2-post-text-image {
+  width: 78%;
+  margin-left: 100px;
+  margin-top: 7px;
+  border-radius: 20px;
+}
+
+.col2-post-toolbar {
+  height: 40px;
+  margin-left: 80px;
+}
+
+.col2-post-toolbar-button {
+  display:inline;
+  margin-left: 10px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+#col2-post-toolbar-autocomplete {
+  height: 20px;
+  width: auto;
+  margin-top: 5px;
+  margin-left: 10px;
+  border-radius: 20px;
+  border: 1px solid #e1e1e1;
+  text-indent:5px
+}
+
+#col2-post-toolbar-button-select {
+  height: 20px;
+  width: 67px;
+  margin-top: 5px;
+  margin-left: 10px;
+  border-radius: 20px;
+  border: 1px solid #e1e1e1;
+  text-indent:5px
+}
+
+.col2-post-toolbar-post {
+  margin-left: 275px;
+  font-size: 1.3em;
+  border-radius: 20px;
+  background-color: rgb(65, 145, 244);
+  color: #fff;
+  box-shadow: 1px 1px 3px #black;
+  cursor: pointer;
+}
+
+.col2-post-toolbar-button img {
+  width: 20px;
+  height: 20px;
+}
+
+.col2-posts {
+  height: auto;
+  background-color: #fafafa;
+}
+
+.col2-posts-space {
+  height: 10px;
+  background-color: #fafafa;
+}
+
+.col2-posts-content {
+  height: auto;
+  border: 1px solid #e1e1e1;
+  background-color: #fafafa;
+}
+
+.col2-posts-author {
+  height: 60px;
+}
+
+.col2-posts-author-icon {
+  height: 60px;
+  width: 60px;
+  float: left;
+  background-color: yellow;
+  border-radius: 35px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.col2-posts-author-icon img {
+  height: auto;
+  width: 60px;
+  border-radius: 30px;
+  border: 2px solid white;
+}
+
+.col2-posts-author-info {
+  float: left;
+  margin-left: 15px;
+  margin-top: 20px;
+}
+
+.col2-posts-author-info-name {
+  font-size: 1.0em;
+  font-weight: 800;
+}
+
+.col2-posts-author-info-email {
+  font-size: 0.8em;
+  font-weight: 200;
+}
+
+.col2-posts-main {
+  height: auto;
+  margin-left: 80px;
+}
+
+.col2-posts-main img {
+  height: auto;
+  width: 83%;
+  border-radius: 30px;
+}
+
+.col2-posts-content-info {
+    margin-top: 10px;
+    float: right;
+    font-size: 13px;
+}
+
+.col2-posts-content-info-left {
+    color: #2aa3ef;
+}
+.col2-posts-content-info-right {
+    color: #69777f;
+    margin: 10px;
+}
+
+.col2-posts-toolbar {
+}
+
+.col2-posts-toolbar-button {
+  display:inline;
+  margin-left: 80px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.col2-posts-toolbar-button img {
+  margin-top: 10px;
+  width: 20px;
+  height: 20px;
+}

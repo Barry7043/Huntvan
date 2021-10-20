@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <link rel="stylesheet" href="editprofile.css">
+    <script src="editprofile.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+        <!-- 头部区域开始 -->
+        <div class="header">
+            <!-- 头部版心模块 -->
+            <div class="insideheader w">
+                <!-- logo模块-->
+                <div class="logo">
+                    <img src="8653.png" alt="">
+                </div>
+                <!-- 搜索栏模块 -->
+                <div class="search">
+                    <input type="text" placeholder="Search Hunt Van">
+                </div>
+                <!-- 用户头像 -->
+                <div class="user-image">
+                    <img src="administrator.png" alt="" class="userimg">
+                </div>
+                <!-- 用户id -->
+                <div class="user-id">
+                    <span>anonymous</span>
+                </div>
+                <!-- logout 链接， 可以成功跳转到用户个人主页 -->
+                <div class="logout">
+                    <button onclick="location.href='huntvan.html'" type="button">
+                        Back</button>
+                </div>
+            </div>
+        </div>
+        <!-- 头部区域结束 -->
+
+        <!-- 主体部分开始 -->
+        <div class="bd-box w">
+            <!-- 左侧导航栏 -->
+            <div class="bd-left">
+                <ul>
+                    <li class="edit"><a href="editprofile.html">Edit Profile</a></li>
+                    <li><a href="404pagenotfound.html">Change Password</a></li>
+                    <li><a href="404pagenotfound.html">Apps and Websites</a></li>
+                    <li><a href="404pagenotfound.html">Email and SMS</a></li>
+                    <li><a href="404pagenotfound.html">Push Notifications</a></li>
+                    <li><a href="404pagenotfound.html">Manage Contacts</a></li>
+                    <li><a href="404pagenotfound.html">Privacy and Security</a></li>
+                    <li><a href="404pagenotfound.html">Login Activity</a></li>
+                    <li><a href="404pagenotfound.html">Emails from Hunt Van</a></li>
+                </ul>
+            </div>
+
+            <!-- 右侧修改个人资料模块 -->
+            <div class="bd-right">
+                <!-- 修改头像 -->
+                <div class="edit-image">
+                    <img src="administrator.png" alt="" class="user-img" id="img_user">
+                    <div class="changephoto">
+                        <h4>anonymous</h4>
+                        <!-- 点击按钮上传图片 -->
+                        <button type="button" class="btn btn-block btn-primary btn-xs" onclick="userUpload();"><i class="fa fa-cloud-upload"></i>Change Profile Photo</button>
+                    </div>
+                    <input type="file" id="input_upload_user" style="display: none" accept="image/jpg, image/png, image/jpeg" onChange="preview(this,'img_user');">
+                </div>
+
+                <!-- 修改其他个人信息表单 -->
+                <div class="edit-other">
+                    <form action="" method="">
+                        <div>
+                            <label for="name">Username:</label>
+                            <input type="text" id="name" name="user_name">
+                        </div>
+                        <div>
+                            <label for="mail">E-mail:</label>
+                            <input type="email" id="mail" name="user_email">
+                        </div>
+                        <div>
+                            <label for="phone">Phone:</label>
+                            <input type="text" id="phone" name="user_phone">
+                        </div>
+                        <div>
+                            <label for="gender">Gender:</label>
+                            <select>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="birthDate">Birth date:</label>
+                            <select id="year" name ="birthYear"></select> year
+	                        <select id="month" name="birthMonth"></select> month
+	                        <select id="data" name="birthDate"></select> date
+                        </div>                 
+                        <div class="submit-button">
+                            <button type="submit" class="sub-button">Submit</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- 修改其他个人信息表单模块结束 -->
+            </div>
+            <!-- 右侧修改资料模块结束 -->
+        </div>
+        <!-- 主体部分结束 -->    
+</body>
+    <script type="text/javascript" src="birthday.js"></script> 
+</html>

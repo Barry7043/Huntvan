@@ -1,0 +1,49 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial;
+  background-color: rgba(207, 229, 248, 0.3);
+}
+
+a {
+  text-decoration:none;
+}
+
+.wrapper{
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+}
+
+.mainbody {
+  width: 1400px;
+  height: auto;
+  margin: auto;
+  overflow: auto;
+}
+
+.col1 {
+  float: left;
+  width: 250px;
+  min-width: 250px;
+  height: 100%;
+  background-color: #fafafa;
+}
+
+.col2 {
+  float: left;
+  width: 800px;
+  margin-left: 10px;
+  height: auto;
+  background-color: #C2EDFF;
+  overflow: hidden;
+}
+
+.col3 {
+  width: 270px;
+  margin-right: 5px;
+  float: right;
+  height: auto;
+  background-color: inherit;
+  overflow: hidden;
+}

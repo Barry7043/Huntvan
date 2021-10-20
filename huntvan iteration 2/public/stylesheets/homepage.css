@@ -1,0 +1,99 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial;
+  background-color: rgba(207, 229, 248, 0.3);
+}
+
+a {
+  text-decoration:none;
+}
+
+textarea {
+  font-family:Arial;
+  resize:none;
+}
+
+/* 去除选中框 */
+input:focus, textarea:focus,select:focus {
+    outline: none;
+}
+
+.wrapper{
+  width: 1400px;
+  height: auto;
+  overflow: auto;
+}
+
+.mainbody {
+  width: 1400px;
+  height: auto;
+  margin: auto;
+  overflow: auto;
+}
+
+.col1 {
+  float: left;
+  margin-top: 40px;
+  margin-left: 60px;
+  width: 250px;
+  min-width: 250px;
+  height: 100%;
+  background-color: #fafafa;
+}
+
+.col2 {
+  float: left;
+  width: 800px;
+  margin-left: 10px;
+  margin-top: 40px;
+  height: auto;
+  background-color: #fafafa;
+  overflow: hidden;
+}
+
+.col3 {
+  width: 270px;
+  margin-left: 10px;
+  margin-top: 40px;
+  float: right;
+  height: auto;
+  background-color: inherit;
+  overflow: hidden;
+}
+
+.navbar {
+  position: fixed;
+  height: auto;
+  width: 100%;
+  background-color: white;
+  border-bottom: solid;
+  z-index: 1001!important;
+}
+
+.navbar-home {
+  margin-left: 60px;
+  width: auto;
+}
+
+.navbar-home-icon {
+  margin-top: 0px;
+}
+
+.navbar-home-icon img {
+  float: left;
+  height: 40px;
+}
+
+
+.navbar-home-logout {
+  height: 30px;
+  margin-top: 5px;
+  margin-left: 75%;
+  background: #2598FF;
+  font-size: 1.0em;
+  border-radius: 20px;
+  box-shadow: 1px 1px 3px #fdfdfd;
+  color: white;
+  cursor: pointer;
+}

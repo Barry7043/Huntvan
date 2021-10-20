@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>(Sign up)</title>
+</head>
+
+<body>
+  <div class="topdiv" style="margin-left:-8px;margin-top:-8px;margin-right:-8px;background-color:DeepSkyBlue;height:50px;">
+  </div>
+
+  <div class="">
+    <div class="logo" style="margin-top: 50px;margin-left: auto;margin-right: auto;width: 21.5%;height: 10%">
+      <img src="logo.png"/>
+      <br>
+    </div>
+
+  <div class="" style="margin-top: 20px;margin-left: auto; margin-right: auto; text-align: center;">
+    <h2 style="margin-top: 20px;">Create your account</h2>
+  </div>
+
+
+    <div class="input" style="margin-top:40px; margin-left: auto; margin-right: auto; width:350px">
+
+      <form class="" action="/register" method="post">
+        <div class="" style="height:30px; width:350px;">
+          <h4 style="">NAME</h4>
+        </div>
+        <div class="" style="height:30px; width:350px;">
+          <input type="text" name="name" value="" style="margin-top:0px;height:20px; width:342px;" required>
+        </div>
+
+        <div class="" style="height:30px; width:350px;">
+          <h4 style="margin-top: 20px;">EMAIL</h4>
+        </div>
+        <div class="" style="height:30px; width:350px;">
+          <input type="text" name="email" value="" style="margin-top:0px;height:20px; width:342px;" required>
+        </div>
+
+        <div class="" style="height:30px; width:350px;">
+          <h4 style="margin-top: 20px;">PASSWORD</h4>
+        </div>
+        <div class="" style="height:30px; width:350px;">
+          <input type="text" name="password" value="" style="margin-top:0px;height:20px; width:342px;" required>
+        </div>
+
+        <div class="" style="height:30px; width:350px;">
+          <h4 style="margin-top: 20px;">CONFIRM PASSWORD</h4>
+        </div>
+        <div class="" style="height:30px; width:350px;">
+          <input type="text" name="password2" value="" style="margin-top:0px;height:20px; width:342px;" required>
+        </div>
+
+        <div class="" style="height:30px; width:350px;">
+          <h4 style="margin-top: 20px;">DATE OF BIRTH</h4>
+        </div>
+        <div class="" style="height:30px; width:350px;">
+          <div style="display:inline;">
+            <input type="number" name="month" value="" placeholder="MONTH" style="height:20px; width:105px;font-size: 7pt;">
+          </div>
+          <div style="display:inline;">
+            <input type="number" name="day" value="" placeholder="DAY" style="height:20px; width:105px;font-size: 7pt;">
+          </div>
+          <div style="display:inline;">
+            <input type="number" name="year" value="" placeholder="YEAR" style="height:20px; width:105px;font-size: 7pt;">
+          </div>
+
+        <!-- 检测注册信息正确 -->
+          <ul>
+            <% if(typeof errors != 'undefined'){ %>
+              <% errors.forEach(error=>{ %>
+                <li><%= error.message %></li>
+            <%  }) %>
+          <%  } %>
+          </ul>
+
+
+        </div>
+        <div class="" style="margin-top:30px;margin-left:25px;height:30px; width:300px;">
+          <input type="submit" name="" value="register" style="height:35px; width:300px;color:white;background-color:DeepSkyBlue;border:none;">
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+  <br><br><br>
+
+  <script src="script.js">
+
+  </script>
+
+</body>
+
+</html>

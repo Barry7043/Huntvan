@@ -1,0 +1,129 @@
+
+.col1-follower-box {
+  height: 220px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  margin-right: 10px;
+  border-radius: 2px;
+}
+
+.col1-follower-box-banner {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 45%;
+}
+
+.col1-follower-box-banner img {
+  width: 100%;
+}
+
+.col1-follower-box-user-info-wrapper {
+  height: 70%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 1000!important;
+}
+
+.col1-follower-box-toolbar {
+  height: 50%;
+  display: block;
+  width: auto;
+  padding: 0 10px 0 10px;
+  margin-bottom: 10px;
+}
+
+.col1-follower-box-user-icon-wrapper {
+  height: 50%;
+  display: block;
+  width: auto;
+  overflow: hidden;
+}
+
+.col1-follower-box-user-icon {
+  height: 60px;
+  width: 60px;
+  float: left;
+  background-color: yellow;
+  border-radius: 35px;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.col1-follower-box-user-icon input {
+  height: auto;
+  width: 60px;
+  border-radius: 30px;
+  border: 2px solid white;
+}
+
+.col1-follower-box-user-name p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.col1-follower-box-user-name p.col1-user-text-name {
+  font-size: 1.0em;
+  margin-top: 40px;
+  margin-left: 80px;
+  font-weight: 800;
+}
+
+.col1-follower-box-user-name p.col1-user-text-email {
+  font-size: 0.8em;
+  font-weight: 200;
+  margin-left: 80px;
+}
+
+.col1-follower-box-toolbar-col1,
+.col1-follower-box-toolbar-col2,
+.col1-follower-box-toolbar-col3 {
+  width: 33.3%;
+  float: left;
+  height: 60px;
+  margin-top: 15px;
+}
+
+.col1-posts-toolbar-title {
+    font-size: 0.9em;
+    display: block;
+    margin: 12px 5px 0 5px;
+    font-weight: 700;
+    color: #323642;
+}
+
+.col1-posts-toolbar-count {
+    font-size: 1.0em;
+    display: block;
+    margin: 8px 5px 0 8px;
+    color: #2598FF;
+    font-weight: 600;
+}
+
+.col1-navbar-content {
+  margin-left: 20px;
+  font-size: 1.3em;
+  border:none;
+  background-color: inherit;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.col1-navbar-content:hover {
+    background-color: rgb(65, 145, 244);
+    color: white;
+}
+
+.col1-navbar-content-button {
+  margin-left: 20px;
+  font-size: 1.3em;
+  border-radius: 20px;
+  background-color: rgb(65, 145, 244);
+  color: #fff;
+  box-shadow: 1px 1px 3px #black;
+  cursor: pointer;
+}

@@ -1,0 +1,426 @@
+/* 总体风格样式 */
+* {                    /* 消除内外边距 */
+    margin: 0;
+    padding: 0;
+}
+.w {                    /* 版心模块 */
+    width: 970px;      /* 宽度 */
+    margin: auto;       /* 居中对齐 */
+}
+li {
+    list-style: none;   /* 去掉无序列表的圆点 */
+}
+a {
+    text-decoration: none; /* 所有链接都去掉下划线 */
+}
+/* 清除浮动代码 */
+.clearfix:before,.clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after {
+    clear:both;
+}
+.clearfix {
+    *zoom: 1;
+}
+body {
+    background-color: #ffffff; /* 整个页面的背景颜色 */
+}
+button{
+    outline: none; /* 去掉鼠标点击button时出现的傻傻的蓝色边框 */
+}
+/* 头部风格样式开始 */
+.header {
+    height: 53px;
+    border-bottom: 1px solid #cdd6dd;
+}
+
+.insideheader {
+    height: 53px;
+}
+.logo {
+    float: left;
+    width: 198px;
+    height: 53px;
+}
+/* 搜索模块 */
+.search {
+    float: left;
+    width: 528px;
+    height: 38px;
+    margin-left: -86px;
+    margin-top: 7px;
+}
+.search input {
+    float: left;
+    width: 458px;
+    height: 36px;
+    border: none;
+    color: #667786; /* 修改 input value 里面的文字颜色 */
+    font-size: 16px;  /* 修改 input value 里面的文字大小 */
+    padding-left: 15px; /* 设置input value 里面的文字和边框的左边距 会撑大盒子 */
+    background-color: #e6ecf0;
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 9999px;         /* 从推特那里’偷‘来的圆角写法 */
+    border-top-right-radius: 9999px;
+    outline: none;
+}
+
+.login button {
+    float: left;
+    width: 87.03px;
+    height: 30px;
+    margin-top: 11px;
+    border: 1px solid #2aa3ef ;
+    margin-left: 95px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #2aa3ef;
+    background-color: #ffffff;
+    cursor:pointer; /* 鼠标经过按钮变成小手手 */
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 9999px;         /* 从推特那里’偷‘来的圆角写法 */
+    border-top-right-radius: 9999px;
+}
+.login button:hover {
+    background-color: #e9f6fd;
+}
+.signup button {
+    float: right;
+    width: 98.22px;
+    height: 30px;
+    margin-top: 11px;
+    border: 1px solid #2aa3ef ;
+    margin-right: 40px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #2aa3ef;
+    cursor:pointer; /* 鼠标经过按钮变成小手手 */
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;      /* 从推特那里’偷‘来的圆角写法 */
+    border-top-left-radius: 9999px;
+    border-top-right-radius: 9999px;
+}
+.signup button:hover {
+    background-color: #2593db;
+}
+/* 头部风格样式开始 */
+
+/* 主体区域风格样式开始 */
+.mainbody{
+    height: 1140px; /* 整个版心高度*/
+}
+.main {             /* 左侧内容高度 */
+    float: left;
+    width: 600px;
+    height: 1138px;
+    color: #ffffff;
+    border: 1px solid #cdd6dd;
+    border-top: 0px;
+}
+/* 左侧内容风格样式开始 */
+.hunt {
+    float: left;
+    width: 580px;
+    height: 53px;
+    color: #14171a;
+    line-height: 43px;
+    padding-left: 20px;
+}
+/* 导航栏模块 */
+.nav {
+    float: left;
+    width: 580px;
+    height: 53px;
+}
+.nav ul li {
+    float: left;
+    margin: 0 5px;   /* 左右margin */
+}
+.nav ul li a {
+    display: block;  /* 行内元素转换成块级元素 */
+    height: 48px;    /* 链接高度 */
+    padding: 0 10px; /* 设置左右padding值为10px */
+    line-height: 48px; /* 文字垂直居中 */
+    font-size: 18px;
+    color: #69777f;
+    font-weight: 700;
+}
+.nav ul li .foryou {
+    color: #2aa3ef;
+    border-bottom: 2px solid #2aa3ef;
+}
+.nav ul li a:hover {
+    color: #2aa3ef;
+    background-color: #e9f6fd;
+}
+/* 左侧内容区域风格样式开始 */
+.box-bd {
+    float: left;
+    width: 600px;
+    height: 1030px;
+    background-color: #ffffff;
+}
+#odd {
+    border-left: none;    /* 去掉左侧帖子的边框 */
+}
+.box-bd ul {
+    width: 604px;
+    height: 1030px;
+}
+.box-bd ul li {
+    float: left;
+    width: 288px;
+    height: 330px;
+    margin-bottom: 12px;
+    margin-right: 12px; /* 每个小li之间的空隙*/
+    background-color: #fff;
+    border: 1px solid #e6ecf0;
+}
+.box-bd ul li img {
+    width: 100%;
+}
+.box-bd ul li h4 {
+    margin: 20px 20px 20px 25px; /* 右20左25 */
+    font-size: 15px;
+    color: #050505;
+    font-weight: 700; /* 不加粗 */
+}
+.box-bd .info {
+    margin: 0 20px 0px 25px;
+    font-size: 13px;
+}
+
+.box-bd .info .left {
+    color: #2aa3ef;
+}
+.box-bd .info .right {
+    color: #69777f;
+    margin-left: 10px;
+}
+/* 左侧内容区域风格样式结束 */
+/* 右侧快捷登陆模块样式 */
+.aside{
+    float: right;
+    width: 350px;
+    height: 620px;
+    color: #ffffff;
+    /* background-color: red; */
+    border: 1px solid #cdd6dd;
+    margin-top: 10px;
+    border-radius: 14px;
+}
+.asidebody {
+    height: 600px;
+    width: 319px;
+    margin: 10px auto;
+    /* background-color: black; */
+}
+.asidebody ul {
+    width: 238.5px;
+    height: 226.5px;
+    margin: auto;
+    border: none;
+}
+.asidebody ul li {
+    width: 238.5px;
+    height: 226.5px;
+    border: none;
+}
+.asidebody ul li img {
+    width: 100%;
+}
+.asidebody .header {
+    margin: 15px 0 5px;
+    border-bottom: 0;
+}
+.asidebody h4 {
+    color: #14171a;
+    font-size: 22px;
+    font-weight: 700;
+}
+.asidebody .username {
+    padding: 10px 0px;
+    width: 318px;
+    height: 53px;
+}
+.usernamecombine {
+    width: 318px;
+    height: 53px;
+    background-color: #f5f8fa;
+    border-bottom: 2px solid #667786;
+}
+.usernamemethod {
+    padding: 5px 10px 0;
+    font-size: 15px;
+    color: #657786;
+}
+.asidebody input {
+    width: 294px;
+    height: 18px;
+    padding: 2px 10px 5px;
+    background-color: #f5f8fa;
+    font-size: 14px;
+    border: none;
+}
+
+.asidebody .password {
+    padding: 10px 0px 0px;
+    width: 318px;
+    height: 53px;
+}
+.passwordcombine {
+    width: 318px;
+    height: 53px;
+    background-color: #f5f8fa;
+    border-bottom: 2px solid #667786;
+}
+.passwordmethod {
+    padding: 5px 10px 0;
+    font-size: 15px;
+    color: #657786;
+}
+.asidebody input {
+    width: 294px;
+    height: 18px;
+    padding: 2px 10px 5px;
+    background-color: #f5f8fa;
+    font-size: 14px;
+    border: none;
+}
+.forgotpassword {
+    display: block;
+    margin: 5px 0px 15px;
+}
+a.forgotpassword:hover{
+    text-decoration: underline;
+    text-decoration-color: #1b95e0;
+}
+.forgotpassword span {
+    width: 108px;
+    height: 16px;
+    color: #1b95e0;
+    font-size: 13px;
+}
+.loginbut {
+    padding: 0 0;
+    width: 316px;
+    height: 37px;
+}
+.loginbut .login{
+    text-align: center; /*  让下面的span水平居中 */
+    width: 316px;
+    height: 37px;
+    border: 0;
+    background-color: #fff;
+    cursor:pointer; /* 鼠标经过按钮变成小手手 */
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 9999px;         /* 从推特那里’偷‘来的圆角写法 */
+    border-top-right-radius: 9999px;
+    border: 1px solid #2aa3ef;
+}
+.loginbut .login:hover{
+    background-color: #e9f6fd;
+}
+
+.loginbut span {
+    width: 318px;
+    height: 37px;
+    line-height: 37px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #2aa3ef;
+}
+.or {
+    text-align: center; /*  让下面的span水平居中 */
+    padding: 10px 0;
+    width: 318px;
+    height: 19px;
+    font-size: 13px;
+    color: #667786;
+}
+.signupbut {
+    padding: 0 0;
+    width: 316px;
+    height: 37px;
+}
+.signupbut .signup{
+    text-align: center; /*  让下面的span水平居中 */
+    width: 316px;
+    height: 37px;
+    border: 0;
+    background-color: #fff;
+    cursor:pointer; /* 鼠标经过按钮变成小手手 */
+    border-bottom-left-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 9999px;         /* 从推特那里’偷‘来的圆角写法 */
+    border-top-right-radius: 9999px;
+    border: 1px solid #2aa3ef;
+}
+.signupbut .signup:hover{
+    background-color: #e9f6fd;
+}
+.signupbut span {
+    width: 318px;
+    height: 37px;
+    line-height: 37px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #2aa3ef;
+}
+
+/* footer模块 */
+.footer {
+    height: 415px;
+    background-color: #fff;
+}
+
+.footer .w {
+    margin-top: 0px;              /* 这里不能用margin */
+}
+.copyright {
+    float: left;
+}
+.copyright p {
+    margin-top: 0px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: #6a777f;
+}
+.copyright .app {
+    display: block;          /* 行内元素变块元素 */
+    width: 128px;
+    margin-left: 35px;
+    height: 33px;
+    border: 1px solid #34a5ec;
+    text-align: center;
+    line-height: 33px;
+    color: #34a5ec;
+    font-size: 16px;
+
+}
+/* 右侧链接栏 */
+.links {
+    float: right;
+    margin-top: 65px;
+}
+.links dl {
+    text-align: center;
+    float: left;
+    margin-left: 100px;
+}
+.links dl dt {
+    font-size: 16px;
+    color: #34a5ec;
+    margin-bottom: 6px;
+}
+
+.links dl dd a {
+    font-size: 12px;
+    color: #6a777f;
+}
